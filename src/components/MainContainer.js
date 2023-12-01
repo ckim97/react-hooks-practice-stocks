@@ -7,6 +7,7 @@ function MainContainer() {
 
   const [stocks, setStocks] = useState([]);
   const [boughtStocks, setBoughtStocks] = useState([]);
+  const [sort, setSort] = useState("");
   
   console.log(boughtStocks);
 
@@ -30,12 +31,13 @@ function handleRemoveStock(stockObject) {
     boughtStocks.filter((stock) => stock.id !== stockObject.id)
   );
 }
-  
+
+
 
 
   return (
     <div>
-      <SearchBar />
+      <SearchBar/>
       <div className="row">
         <div className="col-8">
           <StockContainer stocks={stocks} onAddStock={handleAddStock}/>

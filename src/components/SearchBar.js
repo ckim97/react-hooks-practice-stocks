@@ -1,8 +1,10 @@
 import React from "react";
 
 function SearchBar() {
+  
+
   return (
-    <div>
+    <div onClick={renderClick}>
       <strong>Sort by:</strong>
       <label>
         <input
